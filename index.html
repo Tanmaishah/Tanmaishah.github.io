@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanmai Shah Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -28,8 +31,23 @@
             <br>
             <h1 class="animate">Hi, I'm <span>Tanmai Shah</span></h1>
             <!-- <p class="animate">Full-Stack Developer | Designer | Innovator</p> -->
-             <br><br>
-            <a href="#about" class="btn animate">About Me</a>
+             <!-- <br><br> -->
+             <section id="contact" class="animate">
+                <div class="container">
+                   
+                    <div class="social-links">
+                        <a href="https://github.com/Tanmaishah" target="blank" class="social-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/tanmai-shah/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+            <a  target="blank" href="https://drive.google.com/file/d/112DcM0yR7zu5gDabLO8JRyh6smtNMIJ8/view?usp=sharing" class="btn animate">My Resume</a>
         </div>
     </header>
 
@@ -39,25 +57,24 @@
             <img src="profile pic.jpg" alt="Tanmai Shah" class="about-img slide-in-left">
             <div class="about-text">
                 <h2>About Me</h2>
-                <p>I am a first year student pursuing Mtech in CSE at International institute of Information technology, Hyderabad. I have a deep intrest in the feild of Gen AI and the transformer model which made it all possible.I aspire to learn more about it and take a deep dive into the HOW about it.</p>
+<div>I am a first year student pursuing Mtech in CSE at International institute of Information technology, Hyderabad. I have a deep intrest in the feild of Gen AI and the transformer model which made it all possible.I aspire to learn more about it and take a deep dive into the HOW about it.</div>
 
-                <h2>Intrests</h2>
-                <p>
-                    Lately, I have aroused a lot of interest in the domain of Machine Learning Generative AI.
- I like to watch podcasts of founders leading in the AI space, what they think about the technology, where it is heading, and what the bottlenecks are.
-
-
+                <h2>Interests</h2>
+                <pre>Lately, I have aroused a lot of interest in the domain of Machine Learning 
+Generative AI.
+I like to watch podcasts of founders leading in the AI space,
+what they think about the technology, where it is heading, and what the bottlenecks are.
  
- Apart from technology I like to read books, especially based on biographies of founders and leaders. I believe that books let you live different perspectives and let you see life from a different life.
+Apart from technology I like to read books, especially based on biographies of founders and leaders. I believe that books let you live different perspectives and let you see life from a different life.
 I also engage myself in playing a lot of physical sports.   
-                </p>
+                </pre>
                 <div class="skills">
                     <h3>Skills:</h3>
                     <ul>
-                        <li>HTML5 / CSS3</li>
-                        <li>JavaScript / React</li>
-                        <li>Node.js / Express.js</li>
-                        <li>SQL / NoSQL Databases</li>
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>Numpy</li>
+                        <li>C++</li>
                         <li>Git / GitHub</li>
                     </ul>
                 </div>
@@ -71,38 +88,34 @@ I also engage myself in playing a lot of physical sports.
             <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project-card fade-in">
-                    <h3>Project 1</h3>
-                    <p>Project description goes here. Talk about the technology stack, challenges, and what you accomplished.</p>
+                    <h3><bold>Exploratoy Data Analysis</bold></h3>
+                    <br>
+                    <p>
+                    In this project I have worked on ecommerce datadet to extrpolate points which data had.The data had values such as product category, Total, Address, etc. I found out mojor buyers and classified them on the basis or region, Categories, Total Expected Income and a few more basis. The comparision made was both price based as well as volume based.                        
+                    </p>
                 </div>
                 <div class="project-card fade-in">
-                    <h3>Project 2</h3>
-                    <p>Project description goes here. Highlight the impact and value of the project.</p>
+                    <h3>Stock Market Prediction</h3>
+                    <br>
+                    <p>
+                    I used Machine Learning to train my LSTM model on past hostoric data of the stock market from 2004 to 2017 to predict the stock market for the next N days. The project used an API from Yahoo finance API which had  data of companies listed on NASDAQ.
+                    LSTM model was used to train the data. 
+
+                    </p>
                 </div>
-                <div class="project-card fade-in">
-                    <h3>Project 3</h3>
-                    <p>Project description goes here. Mention any innovative solutions you applied.</p>
-                </div>
-                <div class="project-card fade-in">
-                    <h3>Project 4</h3>
-                    <p>Project description goes here. Include any special features or unique aspects of the project.</p>
+                 <div class="project-card fade-in">
+                    <!-- <h3>Project 3</h3> -->
+                     <br>
+                     <br>
+                    <p style="text-align: center;">More Coming ..... </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="animate">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you'd like to work with me or just say hello, feel free to drop a message!</p>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required class="slide-in-right">
-                <input type="email" id="email" placeholder="Your Email" required class="slide-in-right">
-                <textarea id="message" placeholder="Your Message" required class="slide-in-right"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+   
+    
 
     <footer>
         <p>&copy; 2024 [Your Name]. All Rights Reserved. | Follow me on 
