@@ -12,15 +12,10 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
+/* Navbar */
 /* Navbar */
 nav {
-    background: #333;
+    background: white;
     padding: 10px 0;
     color: white;
     text-align: center;
@@ -33,50 +28,94 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: Limits width on larger screens */
+    margin: 0 auto; /* Center container */
+    padding: 0 20px; /* Add padding to keep content from touching edges */
+}
+
+nav .logo {
+    font-size: 1.8rem; /* Smaller font size */
+    color: white;
+    text-decoration: none;
+    margin-right: 40px; /* Increased space from the navigation links */
+    line-height: 1.2; /* Adjust line height for vertical alignment */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
+nav ul li {
+    margin: 0; /* Remove default margin from list items */
+}
+/* .logo h1
+{
+    color: #000;
+    background-color: #f4b41a;
+} */
 nav ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 18px;
+    display: flex;
+    align-items: center; /* Aligns text vertically within the nav items */
 }
 
 nav ul li a:hover {
-    color: #f4b41a;
+    color: #0f0;
     transition: color 0.3s ease;
+}
+.logo .animate .visible
+{
+    color: #000;
+}
+#home
+{
+    background-color: black;
+    width: 100vw; /* Full viewport width */
 }
 
 /* Header */
 header {
+    background-color:rgb(16, 226, 226);
+    width: 100vw; /* Full viewport width */
     background: url('header-bg.jpg') no-repeat center center/cover;
     height: 100vh;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     text-align: center;
-    animation: fadeInUp 1s ease-in-out;
+    padding: 0 20px; /* Padding to ensure content does not touch edges */
+    margin: 0;
+    position: relative; /* Ensure it stays in place */
+}
+
+header h1 {
+    font-size: 2.2rem; /* Adjusted font size */
+    margin-bottom: 20px;
 }
 
 header h1 span {
-    color: #f4b41a;
+    color: #0f0;
 }
 
+/* Button Styling */
 header .btn {
-    background: #f4b41a;
+    background: #0f0;
     color: #333;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
     transition: background 0.3s ease;
+    margin-top: 20px; /* Space between content and button */
 }
 
 header .btn:hover {
@@ -84,12 +123,58 @@ header .btn:hover {
     color: white;
 }
 
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #0f0;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header .btn {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .social-link {
+        font-size: 1rem;
+    }
+}
+
 /* About Section */
 .about-container {
     display: flex;
     gap: 30px;
     align-items: center;
-    padding: 50px 0;
+    padding: 50px 20px;
 }
 
 .about-img {
@@ -116,7 +201,7 @@ header .btn:hover {
 }
 
 .skills ul li {
-    background: #f4b41a;
+    background: #0f0;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -127,22 +212,7 @@ header .btn:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    padding: 40px 0;
-}
-
-.project-card {
-    font-size: small;
-    background: #333;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
+    padding: 40px 20px;
 }
 
 .project-card {
@@ -157,10 +227,10 @@ header .btn:hover {
     border: 2px solid transparent; /* Set border color to transparent initially */
 }
 
-.project-card {
-    transform: scale(1.01);
-    border: 2px solid #f4b41a; /* Glow color */
-    box-shadow: 0 0 15px #f4b41a, 0 0 30px #f4b41a; /* Outer glow effect */
+.project-card:hover {
+    transform: scale(1.05);
+    border-color: #0f0; /* Glow color */
+    box-shadow: 0 0 15px #0f0, 0 0 30px #0f0; /* Outer glow effect */
 }
 
 /* Contact Section */
@@ -173,13 +243,13 @@ header .btn:hover {
 
 .social-link {
     font-size: 2rem;
-    color: #333;
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .social-link:hover {
-    color: #f4b41a; /* You can change this to any color you prefer for the hover effect */
+    color: #0f0; /* You can change this to any color you prefer for the hover effect */
 }
 
 .social-link i {
@@ -228,4 +298,52 @@ footer a {
 .animate.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.logo 
+{
+    font-size: xx-large;
+}
+
+.subheading:hover {
+    transform: scale(1.05);
+    border-color: #f4b41a; /* Glow color */
+    box-shadow: 0 0 15px #f4b41a, 0 0 30px #f4b41a; /* Outer glow effect */
+}
+
+body {
+    background: #000;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+}
+
+.matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.matrix::before {
+    content: "0101010101010101";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    color: #0f0;
+    animation: matrix 1.5s linear infinite;
+}
+
+@keyframes matrix {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+.logo.animate
+{
+    color: #000;
+    /* background-color: #f4b41a; */
 }
