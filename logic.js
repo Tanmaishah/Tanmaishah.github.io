@@ -1,3 +1,4 @@
+console.log(1234);
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -41,7 +42,6 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         alert("Please fill in all fields.");
     }
 });
-// console.log(12);
 document.addEventListener('DOMContentLoaded', () => {
     const ctx = document.getElementById('myChart').getContext('2d');
     
